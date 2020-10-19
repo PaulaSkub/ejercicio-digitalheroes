@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/heroes', function(req, res) {
-  res.render('heroes',{});
-});
+let heroesController = require('../controllers/heroesController')
+
+
+router.get('/', heroesController.listado);
+router.get('/:id/profesion', heroesController.detalle);
+router.get('/:id/resenia/tipo', heroesController.resenia);
 
 module.exports = router;

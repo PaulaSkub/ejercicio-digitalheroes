@@ -5,6 +5,20 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <p>Hola​</p>
+
+    <% let heroesListado = require("../data/heroes.json") %>
+
+    <ol>
+      <% for (let i=0; i < heroesListado.length; i++) { %>
+          <li>
+            <p>id: <%= heroesListado[i].id+ %></p>
+            <p>nombre: <%= heroesListado[i].nombre %></p>
+            <p>profesion: <%= heroesListado[i].profesion %></p>
+            <p>resenia: <%= heroesListado[i].resenia %></p>
+          </li> 
+      <% } %>
+   </ol>
+   
+
   </body>
 </html>
