@@ -2,9 +2,12 @@
 
 
 let heroesController = {
+    
     listado: function(req, res) {
-        res.render('heroes');
+        let heroesListado = require("../data/heroes.json")
+        res.send(heroesListado);
       },
+
     detalle: function(req,res){
         var heroesListado = require("../data/heroes.json")
         
